@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/layui.css">
+    <link rel="stylesheet" href="../css/m/poiReport.css">
+    <title>地点上报</title>
+</head>
+
+<body>
+<form class="layui-form" method="POST">
+    <div class="form-center-item">
+        <span class="form-title">新增/修正校内地点上报</span>
+    </div>
+    <blockquote class="layui-elem-quote layui-text themed-blockquote apply-tips">
+        校内哪些地点的位置有了变化，可以在这里上报给开发者，核实后将更新地图数据。
+    </blockquote>
+    <div class="layui-form-item">
+        <label class="layui-form-label">地点</label>
+        <div class="layui-input-block">
+            <input type="text" name="name" required lay-verify="required" placeholder="请输入地点" autocomplete="off"
+                   class="layui-input">
+        </div>
+    </div>
+    <div class="layui-form-item layui-form-text">
+        <label class="layui-form-label">位置</label>
+        <div class="layui-input-block">
+            <input type="text" name="location" required lay-verify="required" placeholder="请输入位置" autocomplete="off"
+                   class="layui-input">
+        </div>
+    </div>
+    <input style="display: none" readonly name="openid" id="openid">
+    <div class="form-center-item">
+        <button class="layui-btn layui-btn-radius themed-radius-btn">上报</button>
+    </div>
+</form>
+<script src="../layui.js" type="text/javascript"></script>
+<script type="text/javascript">
+    layui.use(['element'],function(){
+        var $=layui.jquery
+        $('#openid').val(window.whsInterface.getOpenid())
+    })
+</script>
+</body>
+
+</html>

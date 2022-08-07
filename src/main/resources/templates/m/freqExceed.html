@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>上报次数已达上限</title>
+    <link rel="stylesheet" href="../css/layui.css">
+    <style>
+        html,
+        body,
+        .container {
+            height: 100%;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .layui-form {
+            width: 80% !important;
+            max-width: 450px;
+            margin: auto;
+            padding-right: 40px;
+        }
+
+        * {
+            -moz-user-select: -moz-none;
+            -moz-user-select: none;
+            -o-user-select: none;
+            -khtml-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+    </style>
+</head>
+
+<div class="container">
+    <div class="layui-form" style="width: 30%;margin: 0px auto;">
+        <div class="layui-form-mid layui-word-aux" style="width: 100%;margin-left: 20px;margin-bottom: 50px;">
+            <h1 style="text-align: center;font-size: 100px;">
+                <i class="layui-icon layui-icon-tips" style="font-size: 100px;"></i>
+            </h1>
+        </div>
+        <div class="layui-form-mid layui-word-aux" style="width: 100%;margin-left: 20px;">
+            <h1 style="text-align: center;">今日上报次数已达上线</h1>
+        </div>
+        <div class="layui-form-mid layui-word-aux" style="width: 100%;margin-left: 20px;margin-bottom: 30px;">
+            <p style="text-align: center;">每天可上报5次</p>
+        </div>
+        <div class="layui-form-mid layui-word-aux" style="width: 100%;margin-left: 35px;margin-bottom: 20px;">
+            <a style="text-align: center;cursor: default;color: #999;">Copyright © 2020 - <span id="cy"></span> Meteor.
+                All right reserved. Powered by layui.</a>
+        </div>
+    </div>
+</div>
+<script src="../layui.js"></script>
+<script>
+    document.getElementById('cy').textContent = new Date().getFullYear()
+    layui.use(['layer', 'form'], function () {
+
+    });
+</script>
+</body>
+
+</html>

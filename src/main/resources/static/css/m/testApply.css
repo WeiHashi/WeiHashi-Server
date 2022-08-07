@@ -1,0 +1,34 @@
+.layui-input-block{
+    margin-left: 50px;
+    margin-right: 20px;
+}
+
+.layui-form-label{
+    padding: 9px 0px;
+    width: 40px;
+}
+
+.form-title{
+    font-size: 25px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.form-center-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0px;
+}
+
+.themed-radius-btn{
+    background-color: #c1272d;
+}
+
+.themed-blockquote{
+    border-left-color: #c1272d;
+}
+
+.apply-tips{
+    margin: 10px;
+}

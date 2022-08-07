@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/layui.css">
+    <link rel="stylesheet" href="../css/m/testApply.css">
+    <title>测试申请</title>
+</head>
+
+<body>
+<form class="layui-form" method="POST">
+    <div class="form-center-item">
+        <img src="../images/ic_launcher.png" width="48px" height="48px">
+        <span class="form-title">测试权限申请</span>
+    </div>
+    <blockquote class="layui-elem-quote layui-text themed-blockquote apply-tips">
+        请注意：<br>
+        1.请勿将自己的账号分享给他人，一经发现将<font color="#c1272d"><b>取消测试资格</b></font>。<br>
+        2.邮箱用于接收申请通过通知邮件。<br>
+        3.本表单<font color="#c1272d"><b>提交后不开放修改</b></font>，请仔细检查各项内容的正确性。<br>
+    </blockquote>
+    <div class="layui-form-item">
+        <label class="layui-form-label">姓名</label>
+        <div class="layui-input-block">
+            <input type="text" name="name" required lay-verify="required" placeholder="请输入姓名" maxlength="100" autocomplete="off"
+                   class="layui-input">
+        </div>
+    </div>
+    <div class="layui-form-item layui-form-text">
+        <label class="layui-form-label">学号</label>
+        <div class="layui-input-block">
+            <input type="text" name="studentid" required lay-verify="required" placeholder="请输入学号" maxlength="10" autocomplete="off"
+                   class="layui-input">
+        </div>
+    </div>
+    <div class="layui-form-item layui-form-text">
+        <label class="layui-form-label">邮箱</label>
+        <div class="layui-input-block">
+            <input type="text" name="email" required lay-verify="required" placeholder="请输入邮箱" maxlength="100" autocomplete="off"
+                   class="layui-input">
+        </div>
+    </div>
+    <div class="form-center-item">
+        <button class="layui-btn layui-btn-radius themed-radius-btn">提交申请</button>
+    </div>
+</form>
+<script src="../layui.js" type="text/javascript"></script>
+<script type="text/javascript">
+    layui.use(['element','form'],function(){
+        var form=layui.form
+        // $('#openid').val('1321')
+        form.on('submit',function(){
+            return confirm('提交后不可更改，是否继续？')
+        })
+    })
+</script>
+</body>
+
+</html>

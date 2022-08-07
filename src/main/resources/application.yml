@@ -1,0 +1,34 @@
+spring:
+  datasource:
+    url: jdbc:mysql://host.devmeteor.cn:11001/${DB_NAME}?useUnicode=true&serverTimezone=Asia/Shanghai
+    username: ${DB_USER}
+    password: ${DB_PASS}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      connection-timeout: 10000
+      validation-timeout: 3000
+      idle-timeout: 60000
+      login-timeout: 5
+      max-lifetime: 60000
+      maximum-pool-size: 10
+      minimum-idle: 5
+      read-only: false
+  jackson:
+    serialization:
+      write-dates-as-timestamps: true
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: Asia/Shanghai
+  redis:
+    host: host.devmeteor.cn
+    password: ${DB_PASS}
+    port: ${REDIS_PORT}
+#logging:
+#  level:
+#    cn.devmeteor.weihashi.dao: debug
+server:
+  ssl:
+    key-store: devmeteor.cn.jks
+    key-store-password: ${KEY_PASS}
+  tomcat:
+    remote-ip-header: X-Real-IP
+  forward-headers-strategy: native
